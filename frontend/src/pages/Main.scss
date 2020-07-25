@@ -1,0 +1,49 @@
+.main-container{
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    '. main .';
+    grid-template-columns: 17% 68% 17%;
+    grid-template-rows: 18% 82%;
+    width: 98vw;
+    height: 100vh;
+    
+    header{
+        grid-area: header;
+    }
+    
+    main{
+        grid-area: main;
+        display: grid;        
+        grid-template-areas: 
+        'title title title'
+        'table . graph'
+        '. . .';
+        grid-template-columns: 45% 10% 45%;
+        grid-template-rows: 20% 45% 35%;
+        grid-row-gap: 16px;
+
+        .title{
+            grid-area: title;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1{
+                font-size: 1.5rem;
+                margin-bottom: 16px;
+            }
+        }
+
+        .table{
+            grid-area: table;
+        }
+
+        .graph{
+            grid-area: graph;
+        }
+    }
+
+    
+}
